@@ -14,10 +14,9 @@ class Employee {
   private String lastName;
   private String role;
 
-  Employee() {} // POURQUOI ????
-
+  Employee() {}
+  
   Employee(String firstName, String lastName, String role) {
-
     this.firstName = firstName;
     this.lastName = lastName;
     this.role = role;
@@ -72,7 +71,7 @@ class Employee {
       return true;
     if (!(o instanceof Employee))
       return false;
-    Employee employee = (Employee) o;
+    Employee employee = (Employee) o; // Casting
     return Objects.equals(this.id, employee.id) && Objects.equals(this.firstName, employee.firstName)
         && Objects.equals(this.lastName, employee.lastName) && Objects.equals(this.role, employee.role);
   }

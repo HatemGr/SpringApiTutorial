@@ -100,6 +100,4 @@ class OrderController {
             .withTitle("Method not allowed") 
             .withDetail("You can't cancel an order that is in the " + order.getStatus() + " status"));
   }
-
-  
 }
